@@ -1,5 +1,5 @@
 /-
-This file is intended for Lean beginners. The goal is to demonstrate what it feels like to prove
+This file is intended for Lean beginners. The goal is to demonstrate:?: what it feels like to prove
 things using Lean and mathlib. Complicated definitions and theory building are not covered.
 Everything is covered again more slowly and with exercises in the next files.
 -/
@@ -27,7 +27,7 @@ to jump to mathlib's version
 def up_bounds (A : set ℝ) := { x : ℝ | ∀ a ∈ A, a ≤ x}
 
 /-- Predicate `is_maximum a A` means `a` is a maximum of `A` -/
-def is_maximum (a : ℝ) (A : set ℝ) := a ∈ A ∧ a ∈ up_bounds A
+def is_maximum (a : ℝ) (A : set ℝ) := a ∈ A ∧ a ∈ up_bounds A 
 
 /-
 In the above definition, the symbol `∧` means "and". We also see the most
@@ -55,7 +55,7 @@ everything left of the final `:` is introducing the objects and assumption. The 
 -/
 lemma unique_max (A : set ℝ) (x y : ℝ) (hx : x is_a_max_of A) (hy : y is_a_max_of A) : x = y :=
 begin
-  -- We first break our assumptions in their two constituent pieces.
+  -- We first break our assumptions in their two constituent:?: pieces.
   -- We are free to choose the name following `with`
   cases hx with x_in x_up,
   cases hy with y_in y_up,
