@@ -63,7 +63,7 @@ begin
   exact hr,
 end
 
-/- 不存在平方等于 2 的无理数 -/
+/- 不存在平方等于 2 的有理数 -/
 theorem sqrt_2_irrational : ¬ ∃ q : ℚ , q * q = 2 :=
 begin
   by_contra,  -- 使用反证法
